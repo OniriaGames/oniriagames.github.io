@@ -8,13 +8,33 @@ body {
 }
 
 @keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
+    to { opacity: 1; }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.preloader {
+    position: fixed;
+    background: #232bed;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
 }
 
 .site-header {
-    padding: 20px;
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.3);
+    padding: 10px 0;
+    z-index: 999;
 }
 
 .header-container {
@@ -23,6 +43,7 @@ body {
     justify-content: flex-start;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logo-text {
@@ -31,13 +52,20 @@ body {
 
 .intro-banner {
     display: flex;
-    justify-content: center; /* Cambiamos de space-between a center */
+    justify-content: center;
     align-items: center;
     padding: 40px 20px;
     max-width: 1000px;
     margin: 0 auto;
     flex-wrap: wrap;
-    gap: 30px; /* Nuevo: agregamos espacio controlado entre ambos */
+    gap: 30px;
+    opacity: 0;
+    animation: fadeInSlide 1.8s ease forwards;
+}
+
+@keyframes fadeInSlide {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 .intro-left h2 {
@@ -47,9 +75,8 @@ body {
 }
 
 .logo-banner {
-    width: 300px;
+    width: 250px;
 }
-
 
 .intro {
     max-width: 900px;
@@ -80,6 +107,12 @@ body {
     margin-bottom: 20px;
     text-align: center;
     border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 .game-icon {
@@ -143,7 +176,6 @@ footer .social a:hover {
 
     .intro-left h2 {
         font-size: 1.5em;
-        text-align: center;
     }
 
     .logo-banner {
@@ -155,25 +187,3 @@ footer .social a:hover {
         justify-content: center;
     }
 }
-
-.intro-banner {
-    animation: fadeInSlide 1.8s ease forwards;
-    opacity: 0;
-}
-
-@keyframes fadeInSlide {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-
