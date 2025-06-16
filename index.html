@@ -7,6 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="preloader">
+        <h1>Oniria Games</h1>
+    </div>
+
     <header class="site-header">
         <div class="header-container">
             <img src="Letras.png" alt="Oniria Games Name" class="logo-text">
@@ -33,6 +37,7 @@
         <div class="game-card">
             <h3>Rocket Rush</h3>
             <img src="RocketRush_Icon.png" alt="Rocket Rush Icon" class="game-icon">
+            <p>¿Quién dijo que estacionar era fácil? Domina el arte de aterrizar tu cohete mientras esquivas todo lo que intenta detenerte. ¡Las 3 estrellas te esperan al final!</p>
             <div class="buttons">
                 <a href="https://play.google.com/store/apps/details?id=com.Wuichole.RocketRush" class="android">Android</a>
                 <a href="#" class="ios">iOS (Próximamente)</a>
@@ -42,20 +47,27 @@
         <div class="game-card">
             <h3>Anura</h3>
             <img src="Anura_Icon.png" alt="Anura Icon" class="game-icon">
+            <p>¡Ayuda a la rana a saltar con precisión!Calcula la fuerza perfecta para llegar de nenúfar en nenúfar.Un solo toque puede hacer la diferencia…¿hasta dónde puedes llegar?</p>
             <div class="buttons">
                 <a href="#" class="android">Android (Próximamente)</a>
                 <a href="#" class="ios">iOS (Próximamente)</a>
             </div>
         </div>
     </section>
-<footer>
-    <p>2025 Oniria Games.</p>
-    <div class="social">
-        <a href="#" target="_blank">Instagram</a> |
-        <a href="#" target="_blank">Twitter</a> |
-        <a href="#" target="_blank">TikTok</a>
-    </div>
-</footer>
 
+    <footer>
+        <p>2025 Oniria Games.</p>
+        <div class="social">
+            <a href="#" target="_blank">Instagram</a> |
+            <a href="#" target="_blank">Twitter</a> |
+            <a href="#" target="_blank">TikTok</a>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelector('.preloader').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
