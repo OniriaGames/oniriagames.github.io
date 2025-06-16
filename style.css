@@ -31,23 +31,25 @@ body {
 
 .intro-banner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Cambiamos de space-between a center */
     align-items: center;
     padding: 40px 20px;
     max-width: 1000px;
     margin: 0 auto;
     flex-wrap: wrap;
+    gap: 30px; /* Nuevo: agregamos espacio controlado entre ambos */
 }
 
 .intro-left h2 {
     font-size: 2em;
-    text-align: left;
+    text-align: center;
     margin: 0;
 }
 
 .logo-banner {
     width: 300px;
 }
+
 
 .intro {
     max-width: 900px;
