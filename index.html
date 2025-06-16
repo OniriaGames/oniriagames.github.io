@@ -5,6 +5,7 @@
     <title>Oniria Games</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
     <div class="preloader">
@@ -31,51 +32,53 @@
         <p>Hoy, como desarrollador independiente, exploro la creatividad a través de los videojuegos y la música. Mi trabajo fusiona arte, programación, diseño sonoro y producción musical para crear experiencias que permitan a las personas disfrutar, desconectar y sumergirse en mundos donde, por un momento, pueden olvidar todo lo que sucede a su alrededor.</p>
     </section>
 
-<section class="games">
-    <h2>Mis Juegos</h2>
-    
-    <div class="games-container">
+    <section class="games">
+        <h2>Mis Juegos</h2>
 
-        <div class="game-card">
-    <div class="game-content">
-        <div class="game-image">
-            <img src="RocketRush_Icon.png" alt="Rocket Rush Icon" class="game-icon">
-        </div>
-        <div class="game-info">
-            <h3>Rocket Rush</h3>
-            <p>Lleva el cohete de la plataforma de salida a la plataforma de estacionamiento esquivando todos los obstáculos y obteniendo las tres estrellas de cada nivel.</p>
-            <div class="buttons">
-                <a href="https://play.google.com/store/apps/details?id=com.Wuichole.RocketRush" class="android">Android</a>
-                <a href="#" class="ios">iOS (Próximamente)</a>
+        <div class="games-container">
+            <div class="game-card">
+                <div class="game-content">
+                    <div class="game-image">
+                        <img src="RocketRush_Icon.png" alt="Rocket Rush Icon" class="game-icon">
+                    </div>
+                    <div class="game-info">
+                        <h3>Rocket Rush</h3>
+                        <p>¿Quién dijo que estacionar era fácil? Domina el arte de aterrizar tu cohete mientras esquivas todo lo que intenta detenerte. ¡Las 3 estrellas te esperan al final!</p>
+                        <div class="buttons">
+                            <a href="https://play.google.com/store/apps/details?id=com.Wuichole.RocketRush" class="android">Android</a>
+                            <a href="#" class="ios">iOS (Próximamente)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-card">
+                <div class="game-content">
+                    <div class="game-image">
+                        <img src="Anura_Icon.png" alt="Anura Icon" class="game-icon">
+                    </div>
+                    <div class="game-info">
+                        <h3>Anura</h3>
+                        <p>¡Ayuda a la rana a saltar con precisión! Calcula la fuerza perfecta para llegar de nenúfar en nenúfar. Un solo toque puede hacer la diferencia…¿hasta dónde puedes llegar?</p>
+                        <div class="buttons">
+                            <a href="#" class="android">Android (Próximamente)</a>
+                            <a href="#" class="ios">iOS (Próximamente)</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-
-<div class="game-card">
-    <div class="game-content">
-        <div class="game-image">
-            <img src="Anura_Icon.png" alt="Anura Icon" class="game-icon">
-        </div>
-        <div class="game-info">
-            <h3>Anura</h3>
-            <p>Salta de plataforma en plataforma con precisión milimétrica y guía a la rana hacia nuevas aventuras en mundos coloridos.</p>
-            <div class="buttons">
-                <a href="#" class="android">Android (Próximamente)</a>
-                <a href="#" class="ios">iOS (Próximamente)</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-        
-    </div>
-</section>
-
+    <section class="music-player">
+        <button id="playMusic">🔊 Activar música</button>
+        <audio id="bgMusic" loop>
+            <source src="Ambiente.mp3" type="audio/mpeg">
+        </audio>
+    </section>
 
     <footer>
-        <p>2025 Oniria Games.</p>
+        <p>© 2025 Oniria Games. Todos los derechos reservados.</p>
         <div class="social">
             <a href="#" target="_blank">Instagram</a> |
             <a href="#" target="_blank">Twitter</a> |
@@ -86,6 +89,12 @@
     <script>
         window.addEventListener('load', () => {
             document.querySelector('.preloader').style.display = 'none';
+        });
+
+        document.getElementById('playMusic').addEventListener('click', function() {
+            const music = document.getElementById('bgMusic');
+            music.play();
+            this.style.display = 'none';
         });
     </script>
 </body>
