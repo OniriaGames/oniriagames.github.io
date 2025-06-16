@@ -32,7 +32,7 @@ html {
 .site-header {
     position: sticky;
     top: 0;
-    background: rgba(0,0,0,0.3);
+    background: transparent;
     padding: 10px 0;
     z-index: 999;
 }
