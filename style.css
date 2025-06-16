@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1a4aeb, #171475);
+    background: linear-gradient(135deg, #00a7e7,#1a4aeb, #171475);
     color: #fff;
     opacity: 0;
     animation: fadeIn 1.5s ease forwards;
