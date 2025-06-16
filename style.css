@@ -122,6 +122,13 @@ html {
     border-radius: 20px;
 }
 
+.games-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
 .buttons {
     margin-top: 15px;
 }
