@@ -5,26 +5,46 @@ body {
     color: #fff;
 }
 
-header {
-    text-align: center;
-    padding: 30px 20px;
+.site-header {
+    padding: 20px;
 }
 
-.logo {
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-text {
+    width: 200px;
+}
+
+.intro-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.intro-left h2 {
+    font-size: 2em;
+    text-align: left;
+    margin: 0;
+}
+
+.logo-banner {
     width: 150px;
-    height: auto;
 }
 
 .intro {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-}
-
-.intro h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 .intro p {
@@ -49,7 +69,7 @@ header {
     border-radius: 10px;
     margin-bottom: 20px;
     text-align: center;
-    border: 2px solid rgba(255, 255, 255, 0.2); /* dejo un marco sutil para que no se pierda */
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .game-icon {
@@ -87,4 +107,3 @@ footer {
     padding: 20px;
     font-size: 0.9em;
 }
-
