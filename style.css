@@ -194,3 +194,34 @@ footer .social a:hover {
         justify-content: center;
     }
 }
+
+.game-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+}
+
+.game-image {
+    flex-shrink: 0;
+}
+
+.game-info {
+    text-align: left;
+}
+
+.game-info h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .game-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .game-info {
+        text-align: center;
+    }
+}
+
